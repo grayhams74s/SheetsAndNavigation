@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+
+struct Person: Identifiable, Hashable {
+    // So i'll just create an automatically instantiated ID as follows.
+    let id = UUID()
+    let name: String
+    
+}
+

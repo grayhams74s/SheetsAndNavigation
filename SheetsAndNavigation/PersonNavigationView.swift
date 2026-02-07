@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct PersonNavigationView: View {
+    
+    let person: Person
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(person.name)
     }
 }
 
 #Preview {
-    PersonNavigationView()
+    PersonNavigationView(person: Person(name: "paul"))
 }

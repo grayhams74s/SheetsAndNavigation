@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct FullScreenView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack {
+                Button (action: {
+                    dismiss()
+                }, label: {
+                   Image(systemName: "xmark")
+                })
+                
+                Text("This takes up the entire screen!")
+            }
+            .padding(.top, 40)
+            Spacer()
+        }
     }
 }
 

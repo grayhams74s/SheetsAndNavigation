@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct SheetItemView: View {
+    
+    let person: Person
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("The name of the person presented is \(person.name)")
     }
 }
 
 #Preview {
-    SheetItemView()
+    SheetItemView(person: Person(name: "Felix"))
 }
